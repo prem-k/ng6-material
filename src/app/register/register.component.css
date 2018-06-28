@@ -1,0 +1,27 @@
+.example-form {
+  min-width: 150px;
+  /*max-width: 500px;*/
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.labelbox{
+    padding:10px 0;
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.labelbox label,
+.labelbox mat-radio-button,
+.labelbox mat-checkbox{
+	margin-right: 10px;
+}
+
+.mat-button{
+  background-color: #c8cace;
+}

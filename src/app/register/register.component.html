@@ -1,0 +1,51 @@
+<div class="reg-form">
+   <h2>User Registartion</h2> 
+   <!-- <a title="Users List" ['routerLink']=['/users/'] >Users List</a> -->
+   <form class="example-form" (ngSubmit)="savefData()">
+      <mat-form-field class="example-full-width">
+         <input matInput placeholder="Name" name="name" [(ngModel)]="name" value="">
+      </mat-form-field>
+      <!-- <mat-form-field class="example-full-width">
+         <input matInput [formControl]="email" placeholder="Email" name="email" [(ngModel)]="email" value="">
+         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field> -->
+      <mat-form-field class="example-full-width">
+         <input matInput placeholder="Email" name="email" [(ngModel)]="email" value="">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+         <input matInput placeholder="Phone" name="phone" [(ngModel)]="phone" value="">
+      </mat-form-field>
+      <div class="labelbox">
+      <mat-radio-group [(ngModel)]="gender" name="gender">
+         <label>Gender : </label>
+         <mat-radio-button value="1">Male</mat-radio-button>
+         <mat-radio-button value="0">Female</mat-radio-button>
+      </mat-radio-group>
+   </div>
+  <div class="labelbox">
+      <label>Education : </label>
+      <mat-checkbox  [(ngModel)]="mba" value="MBA" name="mba">MBA</mat-checkbox>
+      <mat-checkbox  [(ngModel)]="mca" value="MCA" name="mca">MCA</mat-checkbox>
+   </div>
+   <div class="labelbox">
+      <label>Country : </label>
+      <mat-form-field>
+         <mat-select name="country" placeholder="Choose Country" [(ngModel)]="country">
+            <mat-option value="option1">India</mat-option>
+            <mat-option value="option2" disabled>Pakistan</mat-option>
+            <mat-option value="option3">Sri Lanka</mat-option>
+         </mat-select>
+      </mat-form-field>
+   </div>
+      <mat-form-field class="example-full-width">
+         <input matInput [(ngModel)]="date" name="date" [matDatepicker]="picker" placeholder="Choose a date">
+         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+         <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+         <textarea matInput [(ngModel)]="address" name="address" placeholder="Address"></textarea>
+      </mat-form-field>
+      <button mat-button>Save</button>
+   </form>
+</div>

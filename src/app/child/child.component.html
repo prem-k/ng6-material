@@ -1,0 +1,6 @@
+<div class="child-com" *ngIf="userData">
+ Name : <input type="text" [(ngModel)]="userData.name" name="name"> 
+ Phone : <input type="text" [(ngModel)]="userData.phone" name="phone"> 
+ Address : <textarea name="address" [(ngModel)]="userData.address"></textarea> 
+ <input (click)="save()" type="button" value="Save Me!"><br>
+</div>
